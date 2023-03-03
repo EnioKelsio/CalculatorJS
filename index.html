@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <!-- Two text fields -->
+        <input type="text" id="num1">
+        <input type="text" id="num2"
+
+        <!-- One button -->
+        <button onclick="addition()"> Add up!</button>
+        <button onclick="subtraction()">Subtract</button>
+        <button onclick="multiplication()">Multiply</button>
+        <button onclick="division()">Divid</button>
+        <!-- One result -->
+        <div id="result"></div>
+
+    </body>
+    <script>
+
+        function getValues(){
+            var num1 = document.getElementById('num1').value;
+            num1New = parseInt(num1);
+            var num2 = document.getElementById('num2').value;
+            num2New = parseInt(num2);
+        }
+
+       function addition(){
+            getValues();
+
+            var result = num1New + num2New;
+            document.getElementById('result').innerHTML = result;
+
+            alert(result);
+            console.log("The result is "+ result);
+        } 
+
+        function subtraction(){
+            getValues();
+
+            var result = num1New - num2New;
+            document.getElementById('result').innerHTML = result;
+
+            alert(result);
+            console.log("The result is "+ result);
+        } 
+
+        function multiplication(){
+            getValues();
+
+            var result = num1New * num2New;
+            document.getElementById('result').innerHTML = result;
+
+            alert(result);
+            console.log("The result is "+ result);
+        } 
+
+        function division(){
+            getValues();
+
+            if(num1 && num2 == 0){
+                var result="Division by Zero is not possible";
+
+            }else{
+            var result = num1New / num2New;
+            }
+            document.getElementById('result').innerHTML = result;
+
+            alert(result);
+            console.log("The result is "+ result);
+        } 
+
+
+    </script>
+</html>
